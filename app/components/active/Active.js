@@ -5,6 +5,7 @@ import {ContentNav} from '../widgets/index';
 import ActiveList from './ActiveList';
 import DataStore from '../../utils/DataStore';
 import { connect } from 'react-redux';
+import {hashHistory} from 'react-router';
 
 
 class Active extends Component{
@@ -26,7 +27,8 @@ class Active extends Component{
 	}
 
 	onNewActiveClick(){
-		console.log(this.state);
+		// console.log(this.state);
+		hashHistory.push('/active-edit');
 	}
 
 	deleteActive(index){
@@ -65,7 +67,9 @@ class Active extends Component{
 	}
 }
 
-const mapStateToProps= state=>{return {activeList : state.active.activeList} }
+const mapStateToProps= state=>{
+	return {activeList : state.activity.data} 
+}
 
 
 export default connect(mapStateToProps)(Active);

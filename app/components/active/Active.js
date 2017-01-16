@@ -35,6 +35,7 @@ class Active extends Component{
 		activeList.splice(index,1);
 		this.setState({activeList});
 	}
+
 	onReleaseStateChange(index){
 		console.log('releaseChange' ,index);
 		let activeList = this.state.activeList;

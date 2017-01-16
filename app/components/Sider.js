@@ -100,8 +100,6 @@ export default class Sider extends Component {
 
 	}
 
-
-
 	render() {
 	    return (
 	      <div className="sider-wrap" style={{ width : this.state.collapse ? '40px' : '240px' }}>
@@ -138,10 +136,6 @@ export default class Sider extends Component {
 	      				})
 	      			}
 	      			</ul>
-
-
-
-	      			
 	      		</div>
 	      </div>
 	    );
